@@ -1,0 +1,104 @@
+/* Simple CSS Reset */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+:root {
+  --primary: #4caf50;
+  --secondary: #ffffff;
+  --tertiary: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  min-height: 95vh;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+}
+
+button {
+  background-color: var(--primary);
+  border: none;
+  color: var(--tertiary);
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+#results button {
+  flex-grow: 0;
+  width: 14rem;
+  align-self: center;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.searchButton {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+::-moz-selection {
+  color: var(--tertiary);
+  background: var(--primary);
+}
+
+::selection {
+  color: var(--tertiary);
+  background: var(--primary);
+}
+
+footer {
+  margin-left: auto;
+  padding-right: 2rem;
+  font-size: 0.7rem;
+}
